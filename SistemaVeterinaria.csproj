@@ -1,0 +1,300 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{780D3C3D-8A01-46E0-B045-B61BEB6E013B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaVeterinaria</RootNamespace>
+    <AssemblyName>SistemaVeterinaria</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Img\vet.jpg" />
+    <Content Include="Views\Citas\CitasForm.aspx" />
+    <Content Include="Views\Clientes\ActualizarClienteForm.aspx" />
+    <Content Include="Views\Clientes\AgregarClienteForm.aspx" />
+    <Content Include="Views\Clientes\ClientesForm.aspx" />
+    <Content Include="Views\LoginForm.aspx" />
+    <Content Include="Views\Mascotas\ActualizarMascotaForm.aspx" />
+    <Content Include="Views\Mascotas\Razas\ActualizarRazaForm.aspx" />
+    <Content Include="Views\Mascotas\AgregarMascotaForm.aspx" />
+    <Content Include="Views\Mascotas\Razas\AgregarRazaForm.aspx" />
+    <Content Include="Views\Mascotas\MascotasForm.aspx" />
+    <Content Include="Views\Mascotas\Razas\RazasForm.aspx" />
+    <Content Include="Views\Mascotas\TiposMascota\ActualizarTipoMascotaForm.aspx" />
+    <Content Include="Views\Mascotas\TiposMascota\AgregarTipoMascotaForm.aspx" />
+    <Content Include="Views\Mascotas\TiposMascota\TiposMascotaForm.aspx" />
+    <Content Include="Views\Medicos\ActualizarMedicoForm.aspx" />
+    <Content Include="Views\Medicos\AgregarMedicoForm.aspx" />
+    <Content Include="Views\Medicos\MedicosForm.aspx" />
+    <Content Include="Views\MenuPrincipalForm.aspx" />
+    <Content Include="Views\Reportes\ReporteCitasForm.aspx" />
+    <Content Include="Views\Reportes\ReporteMascotasForm.aspx" />
+    <Content Include="Views\Reportes\ReporteUsuariosForm.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HeaderFooter.Master.cs">
+      <DependentUpon>HeaderFooter.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HeaderFooter.Master.designer.cs">
+      <DependentUpon>HeaderFooter.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Citas\CitasForm.aspx.cs">
+      <DependentUpon>CitasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Citas\CitasForm.aspx.designer.cs">
+      <DependentUpon>CitasForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes\ActualizarClienteForm.aspx.cs">
+      <DependentUpon>ActualizarClienteForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\ActualizarClienteForm.aspx.designer.cs">
+      <DependentUpon>ActualizarClienteForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes\AgregarClienteForm.aspx.cs">
+      <DependentUpon>AgregarClienteForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\AgregarClienteForm.aspx.designer.cs">
+      <DependentUpon>AgregarClienteForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes\ClientesForm.aspx.cs">
+      <DependentUpon>ClientesForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\ClientesForm.aspx.designer.cs">
+      <DependentUpon>ClientesForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.aspx.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.aspx.designer.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\ActualizarMascotaForm.aspx.cs">
+      <DependentUpon>ActualizarMascotaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\ActualizarMascotaForm.aspx.designer.cs">
+      <DependentUpon>ActualizarMascotaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\Razas\ActualizarRazaForm.aspx.cs">
+      <DependentUpon>ActualizarRazaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\Razas\ActualizarRazaForm.aspx.designer.cs">
+      <DependentUpon>ActualizarRazaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\AgregarMascotaForm.aspx.cs">
+      <DependentUpon>AgregarMascotaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\AgregarMascotaForm.aspx.designer.cs">
+      <DependentUpon>AgregarMascotaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\Razas\AgregarRazaForm.aspx.cs">
+      <DependentUpon>AgregarRazaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\Razas\AgregarRazaForm.aspx.designer.cs">
+      <DependentUpon>AgregarRazaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\MascotasForm.aspx.cs">
+      <DependentUpon>MascotasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\MascotasForm.aspx.designer.cs">
+      <DependentUpon>MascotasForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\Razas\RazasForm.aspx.cs">
+      <DependentUpon>RazasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\Razas\RazasForm.aspx.designer.cs">
+      <DependentUpon>RazasForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\TiposMascota\ActualizarTipoMascotaForm.aspx.cs">
+      <DependentUpon>ActualizarTipoMascotaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\TiposMascota\ActualizarTipoMascotaForm.aspx.designer.cs">
+      <DependentUpon>ActualizarTipoMascotaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\TiposMascota\AgregarTipoMascotaForm.aspx.cs">
+      <DependentUpon>AgregarTipoMascotaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\TiposMascota\AgregarTipoMascotaForm.aspx.designer.cs">
+      <DependentUpon>AgregarTipoMascotaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mascotas\TiposMascota\TiposMascotaForm.aspx.cs">
+      <DependentUpon>TiposMascotaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mascotas\TiposMascota\TiposMascotaForm.aspx.designer.cs">
+      <DependentUpon>TiposMascotaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Medicos\ActualizarMedicoForm.aspx.cs">
+      <DependentUpon>ActualizarMedicoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Medicos\ActualizarMedicoForm.aspx.designer.cs">
+      <DependentUpon>ActualizarMedicoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Medicos\AgregarMedicoForm.aspx.cs">
+      <DependentUpon>AgregarMedicoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Medicos\AgregarMedicoForm.aspx.designer.cs">
+      <DependentUpon>AgregarMedicoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Medicos\MedicosForm.aspx.cs">
+      <DependentUpon>MedicosForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Medicos\MedicosForm.aspx.designer.cs">
+      <DependentUpon>MedicosForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuPrincipalForm.aspx.cs">
+      <DependentUpon>MenuPrincipalForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MenuPrincipalForm.aspx.designer.cs">
+      <DependentUpon>MenuPrincipalForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\ReporteCitasForm.aspx.cs">
+      <DependentUpon>ReporteCitasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\ReporteCitasForm.aspx.designer.cs">
+      <DependentUpon>ReporteCitasForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\ReporteMascotasForm.aspx.cs">
+      <DependentUpon>ReporteMascotasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\ReporteMascotasForm.aspx.designer.cs">
+      <DependentUpon>ReporteMascotasForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\ReporteUsuariosForm.aspx.cs">
+      <DependentUpon>ReporteUsuariosForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\ReporteUsuariosForm.aspx.designer.cs">
+      <DependentUpon>ReporteUsuariosForm.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HeaderFooter.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58691</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58691/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

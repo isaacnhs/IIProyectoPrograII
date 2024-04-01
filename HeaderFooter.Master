@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderFooter.master.cs" Inherits="SistemaVeterinaria.HeaderFooter" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Principal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form" runat="server">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+                <a class="navbar-brand" href="#">Veterinaria</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="lnkInicio" runat="server" NavigateUrl="~/Views/MenuPrincipalForm.aspx" CssClass="nav-link" Text="Inicio"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Views/Clientes/ClientesForm.aspx" CssClass="nav-link" Text="Clientes"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Views/Medicos/MedicosForm.aspx" CssClass="nav-link" Text="Medicos"></asp:HyperLink>
+                        </li>
+
+
+                        <li class="nav-item active dropdown">
+                            <a id="btnMascotas" href="#" class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Mascotas</a>
+                            <div class="dropdown-menu" aria-labelledby="btnMascotas">
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Views/Mascotas/MascotasForm.aspx" CssClass="dropdown-item" Text="Mascotas"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkTipoMascota" runat="server" NavigateUrl="~/Views/Mascotas/TiposMascota/TiposMascotaForm.aspx" CssClass="dropdown-item" Text="Tipo de Mascota"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkRaza" runat="server" NavigateUrl="~/Views/Mascotas/Razas/RazasForm.aspx" CssClass="dropdown-item" Text="Raza"></asp:HyperLink>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Views/Citas/CitasForm.aspx" CssClass="nav-link" Text="Citas"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="btnReportes" href="#"  class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Reportes</a>
+                            <div class="dropdown-menu" aria-labelledby="btnReportes">
+                                <asp:HyperLink ID="lnkReporteUsuarios" runat="server" NavigateUrl="~/Views/Reportes/ReporteUsuariosForm.aspx" CssClass="dropdown-item" Text="Reporte de Usuarios"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkReporteMascotas" runat="server" NavigateUrl="~/Views/Reportes/ReporteMascotasForm.aspx" CssClass="dropdown-item" Text="Reporte de Mascotas"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkReporteCitas" runat="server" NavigateUrl="~/Views/Reportes/ReporteCitasForm.aspx" CssClass="dropdown-item" Text="Reporte de Control de Citas"></asp:HyperLink>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="lnkSalir" runat="server" CssClass="nav-link" Text="Salir" OnClick="lnkSalir_Click"></asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server" />
+        </main>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
